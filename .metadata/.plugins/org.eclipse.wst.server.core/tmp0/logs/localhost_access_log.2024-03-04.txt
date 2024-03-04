@@ -1,0 +1,8 @@
+127.0.0.1 - - [04/Mar/2024:09:36:18 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [04/Mar/2024:09:36:20 +0900] "GET /web-study-01/index.jsp HTTP/1.1" 200 154
+0:0:0:0:0:0:0:1 - - [04/Mar/2024:09:36:20 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [04/Mar/2024:09:38:34 +0900] "GET /web-study-01/javaAdditionServlet01.java HTTP/1.1" 404 850
+0:0:0:0:0:0:0:1 - - [04/Mar/2024:09:38:42 +0900] "GET /web-study-01/AdditionServlet01.java HTTP/1.1" 404 846
+0:0:0:0:0:0:0:1 - - [04/Mar/2024:09:38:52 +0900] "GET /web-study-01/AdditionServlet01.java HTTP/1.1" 404 846
+0:0:0:0:0:0:0:1 - - [04/Mar/2024:09:39:04 +0900] "GET /web-study-01/AdditionServlet01 HTTP/1.1" 200 93
+0:0:0:0:0:0:0:1 - - [04/Mar/2024:09:45:13 +0900] "GET /web-study-01/addition02.jsp HTTP/1.1" 200 235
