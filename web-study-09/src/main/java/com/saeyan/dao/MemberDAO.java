@@ -138,4 +138,75 @@ public class MemberDAO {
 		
 		return result;
 	}
+
+	public MemberVO getMember(String userid) {
+		String sql = "select * from member where userid=?";
+		MemberVO vo = new MemberVO();
+		
+		try {
+			con = getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				String name = rs.getString("name");
+				
+				vo.setName(name);
+				vo.setUserid(rs.getString("userid"));
+				vo.setPwd(rs.getString("pwd"));
+				vo.setEmail(rs.getString("email"));
+				vo.setPhone(rs.getString("phone"));
+				vo.setAdmin(rs.getInt("admin"));
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(con != null) con.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return vo;
+	}
+
+	public int updateMember(MemberVO vo) {
+		int result = -1;
+		
+		String sql = "update member set name=?, pwd=?, email=?, " //한 칸 뛰고(space) 엔터(enter)하면 밑으로 + "" 되면서 넘어간다
+				+ "phone=?, admin=? where userid=?";
+		
+		try {
+			//1.연결
+			con = getConnection();
+			//2.sql 구문 전송
+			pstmt = con.prepareStatement(sql);
+			//3.맵핑
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getPwd());
+			pstmt.setString(3, vo.getEmail());
+			pstmt.setString(4, vo.getPhone());
+			pstmt.setInt(5, vo.getAdmin());
+			pstmt.setString(6, vo.getUserid());
+			
+			//4.구문실행
+			result = pstmt.executeUpdate();
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return result;
+	
+	}
 }

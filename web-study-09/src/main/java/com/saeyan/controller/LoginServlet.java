@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.saeyan.dao.MemberDAO;
+import com.saeyan.dto.MemberVO;
 
 
 @WebServlet("/login.do")
@@ -37,10 +38,12 @@ public class LoginServlet extends HttpServlet {
 		// 1 : 로그인 성공
 		
 		int result = mDao.userCheck(userid, pwd);
+		HttpSession session = request.getSession();
+		MemberVO vo = mDao.getMember(userid);
+		
 		
 		if(result == 1) {
-			HttpSession session = request.getSession();
-			session.setAttribute("loginUser", userid);
+			session.setAttribute("loginUser", vo);
 			request.setAttribute("message", "로그인 성공했습니다.");
 			url = "member/main.jsp";
 		}else if(result == 0) {
