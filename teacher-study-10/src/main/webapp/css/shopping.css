@@ -1,0 +1,48 @@
+#wrap {
+	width: 971px; /* 1024*768�� �ػ󵵸� ���߾ ���� */
+	/* ��� ������ ���� �ٱ��� ���� ���� */
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+	color: purple; /* �� ���� */
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 12px; /* �۲� ũ�� */
+	line-height: 24px; /* �� ���� */
+}
+
+table td, th {
+	border: #d3d3d3 solid 1px; /* ��輱 ���� ��Ÿ�� ���� */
+	padding: 5px; /* ���� ���� */
+}
+
+table.list td, th {
+	border: #d3d3d3 solid 1px; /* ��輱 ���� ��Ÿ�� ���� */
+	padding: 5px; /* ���� ���� */
+	text-align: center;
+}
+
+th {
+	background: skyblue; /* ���� */
+}
+
+img {
+	width: 220px; /* �̹��� �ʺ�(����) */
+	height: 300px; /* �̹��� ����(����) */
+}
+
+a {
+	text-decoration: none; /* ��ũ ���� ���ֱ� */
+	color: black; /* �� ���� */
+}
+
+a:HOVER {
+	text-decoration: underline; /* ���� */
+	color: purple; /* �� ���� */
+}
