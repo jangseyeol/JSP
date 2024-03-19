@@ -108,10 +108,26 @@
 
 
 
-				
-			
-			
-			<Context docBase="C:\java\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\java\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\self-jangs-study-10" path="/self-jangs-study-10" reloadable="true" source="org.eclipse.jst.jee.server:self-jangs-study-10"/></Host>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<Context docBase="C:\java\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\java\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jangs-project" path="/web-study-11" reloadable="true" source="org.eclipse.jst.jee.server:jangs-project">
+					<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="1234" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:xe" username="ezen"/>
+				</Context>
+			</Host>
 		</Engine>
+
 	</Service>
 </Server>
